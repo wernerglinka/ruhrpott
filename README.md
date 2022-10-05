@@ -5,7 +5,11 @@
 
 A reference implementation of a static website, build with Metalsmith.
            
-This website was built with [Metalsmith](https://metalsmith.io/), a static site generator. It uses the [Nunjucks](https://mozilla.github.io/nunjucks/) templating language. The site is hosted on [Netlify](https://www.netlify.com/).
+This website was built with [Metalsmith](https://metalsmith.io/), a static site generator and the [Nunjucks](https://mozilla.github.io/nunjucks/) templating language. The site is hosted on [Netlify](https://www.netlify.com/).
+
+The site is a WIP, it will be updated with more features and content over time.
+
+
 
 
 ## Join the Metalsmith community at [Gitter](https://gitter.im/metalsmith/community).

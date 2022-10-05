@@ -1,0 +1,39 @@
+.block-wrapper {
+  // background images are attached to the block-wrapper via style attribute and are defined in frontmatter
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // classes that are attached to the block-wrapper via frontmatter fields
+  &.inContainer {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &.paddingTop {
+    padding-top: 40px;
+  }
+  &.paddingBottom {
+    padding-bottom: 40px;
+  }
+  &.paddingTop {
+    margin-top: 60px;
+  }
+  &.marginBottom {
+    margin-bottom: 60px;
+  }
+
+  &.isDark * {
+    color: #fff;
+  }
+
+  .columns {
+    display: flex;
+  }
+  .column {
+    flex: 1 1 100%;
+  }
+
+  &.banner {
+    height: 100vh;
+  }
+}

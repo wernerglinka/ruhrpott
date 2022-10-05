@@ -1,0 +1,6 @@
+{#
+  component is a generic nunjucks macro that uses the name parameter to compose the name of the target component macro. Since Nunjucks doesn't support dynamic macro names, we have to use a helper function to do this.
+#}
+{% macro component(name, params, site) %}
+  {% include "../sections/" + name + ".njk" ignore missing %}
+{% endmacro %}

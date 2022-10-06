@@ -8,7 +8,7 @@
 {% from "../partials/text.njk" import text %}
 {% from "../partials/scroll-to.njk" import scrollTo %}
 
-{% macro imageSlider(info, site) %}
+{% macro imageSlider(info, metadata) %}
   
   <div class="slides-container">
     <ul class="slides">
@@ -18,7 +18,7 @@
         class="slide js-slide {%  if loop.last %}initial{% endif %}"
       >
         {# site is in scope, was passed via the component macro #}
-        {{ responsiveImage(slide.image, site) }}
+        {{ responsiveImage(slide.image, metadata) }}
         <div class="slide-content">
           {{ text(slide.text) }}
           {{ ctas(slide.ctas) }}

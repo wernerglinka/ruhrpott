@@ -12,7 +12,7 @@ const postcss = require("@metalsmith/postcss");
 const when = require("metalsmith-if");
 const htmlMinifier = require("metalsmith-html-minifier");
 const assets = require("metalsmith-static-files");
-const metadata = require("metalsmith-metadata");
+const metadata = require("@metalsmith/metadata");
 const prism = require("metalsmith-prism");
 const externalLinks = require("metalsmith-safe-links");
 
@@ -68,8 +68,9 @@ Metalsmith(__dirname)
 
   .use(
     metadata({
-      site: "data/site.json",
-      nav: "data/navigation.json",
+      metadata: "src/content/data/site.json",
+      "metadata.navigation": "src/content/data/navigation.json",
+      "metadata.fußball": "src/content/data/fußball",
     })
   )
 

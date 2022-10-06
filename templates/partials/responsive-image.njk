@@ -1,6 +1,6 @@
-{% macro responsiveImage(image, siteMeta) %}
+{% macro responsiveImage(image, metadata) %}
   <figure class="responsive-wrapper js-progressive-image-wrapper" style="padding-bottom:{{ image.aspectRatio}}%;" >
-
+    {% set siteMeta = metadata.site %}
     {# assemble the image url #}
     {% set source = siteMeta.imagePrefix ~ image.src %}
 

@@ -10,6 +10,7 @@ seo:
 
 sections:
   - container: section # section || article || aside
+    description: "full page banner carousel"
     containerFields:
       disabled: false
       containerId: "banner"
@@ -66,8 +67,40 @@ sections:
                   subTitle: ""
                   prose: |-
                     The Ruhrpott is a former industrial area centrally located in North Rhine Westphalia. The region takes its name partly from the river Ruhr and the word “Pott” which comes from “Kohlenpott” (meaning “coal pot”) alluding to the area’s coal-mining past.  
-            scrollTarget: "section1"    
+            scrollTarget: "section1" 
   - container: article # section || article || aside
+    description: "section with text and logos"
+    containerFields:
+      disabled: false
+      containerId: ""
+      containerClass: ""
+      inContainer: true
+      margin:
+        top: true
+        bottom: true
+      padding:
+        top: false
+        bottom: false
+      background:
+        color: ""
+        image: ""
+        isDark: false 
+    columns:
+      - column:
+        blocks:
+          - name: text
+            prefix: ""
+            title: Fußball in the Ruhrpott
+            header: "h2"
+            subTitle: "Fußball in the Ruhrpott plays a key role in German Fußball"
+            prose: |-
+              A total of 16 German championships and eleven titles in the DFB Cup were won by teams from the Ruhr area. In 1937 FC Schalke 04 became the first double winner in Germany, in 1966 Borussia Dortmund was the first German club to win a European Cup and in 1997 Dortmund won the Champions League and FC Schalke 04 the UEFA Cup. A total of seven clubs from the Ruhr area have played in the Bundesliga so far, currently (2022/23) three clubs play in the top division with Schalke, Dortmund and VfL Bochum. In particular, Borussia Dortmund and FC Schalke 04 play an important role in German football and are also popular nationwide.
+          - name: logos
+            scope: "all" # all || selections
+            source: fußball
+            
+  - container: article # section || article || aside
+    description: "full width text section"
     containerFields:
       disabled: false
       containerId: "section1"
@@ -102,6 +135,7 @@ sections:
                 isButton: true
                 buttonStyle: "primary"
   - container: article # section || article || aside
+    description: "section with text and image"
     containerFields:
       disabled: false
       containerId: "section2"
@@ -141,6 +175,7 @@ sections:
                 isButton: true
                 buttonStyle: "primary"
   - container: article # section || article || aside
+    description: "section with text and image"
     containerFields:
       disabled: false
       containerId: "section3"

@@ -57,10 +57,9 @@
             {% for block in column.blocks %}
               {% set name = block.name %}
               {% set params = block %}
-              {% set site = site %}
 
               {# name determines which block is rendered #}
-              {{ renderBlock(name, params, site) }}
+              {{ renderBlock(name, params, metadata) }}
             {% endfor %}
           </div>
         {% endfor %}

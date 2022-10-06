@@ -1,0 +1,23 @@
+{% macro logos(info, metadata) %}
+
+  {# is scope is set to all we will show all logos that are located in src/content/data/<info.source> #}
+  <div class="logos-wrapper">
+  {% if info.scope == "all" %}
+    <ul class="logos">
+    {% for item in metadata[info.source] %}
+      {# assemble the logo url #}
+      {% set source = metadata.site.imagePrefix ~ "w_200,c_fill,g_auto,f_auto/" ~ item.logo %}
+      <li>
+        <a href="{{ item.web }}" title="{{ item.name }}">
+          <img src="{{ source }}" alt="{{ item.name }}" />
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if info.scope === "selection" %}
+    this is selection
+  {% endif %}
+  </div>
+{% endmacro %}

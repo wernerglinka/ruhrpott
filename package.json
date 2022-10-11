@@ -47,7 +47,6 @@
     "@metalsmith/sass": "^1.1.0",
     "autoprefixer": "^10.4.12",
     "cssnano": "^5.1.13",
-    "dom-fader": "^2.0.2",
     "esbuild": "^0.15.9",
     "jstransformer-markdown": "^1.2.1",
     "jstransformer-nunjucks": "^1.1.0",
@@ -62,7 +61,7 @@
     "metalsmith-safe-links": "^1.1.0",
     "metalsmith-static-files": "^0.2.0",
     "postcss-preset-env": "^7.8.2",
-    "swiper": "^8.4.2"
+    "vanilla-fade": "^1.1.0"
   },
   "engines": {
     "node": ">=14.0.0"

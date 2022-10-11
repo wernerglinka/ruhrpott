@@ -1,9 +1,5 @@
 /* global window, document */
 
-// https://github.com/BrentonCozby/dom-fader
-const {fadeIn, fadeOut, fadeToggle} = domFader;
-
-
 /**
  * Manage filterred rich list display
  * 
@@ -11,17 +7,48 @@ const {fadeIn, fadeOut, fadeToggle} = domFader;
  * @return {function} initializes a filterred rich list display
  */
 const listFilters = (function() {
+
+  // fade out
+
+  function fadeOut(el){
+    el.style.opacity = 1;
+
+    (function fade() {
+      if ((el.style.opacity -= .1) < 0) {
+        el.style.display = "none";
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  }
+
+  // fade in
+
+  function fadeIn(el, display){
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+
+    (function fade() {
+      var val = el.style.opacity;
+      console.log(val);
+      if (!((val += .1) >= 1)) {
+        console.log(val);
+        el.style.opacity = val;
+        requestAnimationFrame(fade);
+      } 
+    })();
+  }
     
   const hideAllListItems = (list) => {
     const listItems = list.querySelectorAll("li");
     listItems.forEach((item) => {
-      item.style.display = 'none';
+      fadeOut(item);
     });
   };
   const showAllListItems = (list) => {
     const listItems = list.querySelectorAll("li");
     listItems.forEach((item) => {
-      item.style.display = 'block';
+      fadeIn(item);
     });
   };
 
@@ -29,7 +56,7 @@ const listFilters = (function() {
     const listItems = list.querySelectorAll("li");
     listItems.forEach((item) => {
       if (item.classList.contains(category)) {
-        item.style.display = 'block';
+        fadeIn(item);
       }
     });
   };
@@ -47,6 +74,13 @@ const listFilters = (function() {
       filterButtons.forEach(filterButton => {
         // attach click event to each filter button
         filterButton.addEventListener("click", (e) => {
+          // reset active state for all filter buttons
+          filterButtons.forEach(filterButton => {
+            filterButton.classList.remove("active");
+          });
+          // set active state for this filter button
+          e.target.classList.add("active");
+
           // get the filter value
           const filterBy = e.target.innerText;
           

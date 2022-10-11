@@ -22,7 +22,7 @@
   {% set filterArray = filterString | toArray %}
 
   <ul class="list-filters js-list-filters">
-    <li>all</li>
+    <li class="active">all</li>
     {% for filterItem in filterArray %}
     <li>{{ filterItem }}</li>
     {% endfor %}

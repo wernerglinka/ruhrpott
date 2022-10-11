@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Duisburg",
+    "description" : "Duisburg, lying on the confluence of the Rhine and the Ruhr rivers in the center of the Rhine-Ruhr Region, it is the 5th largest city in North Rhine-Westphalia and the 15th-largest city in Germany.",
+    "thumbnail": "v1665360784/zeche-nordstern/duisburg-innenhafen_lrzfm4.jpg",
+    "web": "https://www.duisburg.de/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Duisburg",
+    "wappen": {
+      "src": "v1665363613/zeche-nordstern/duisburg_czorip.png",
+    "aspectRatio": 109
+    },
+    "categories": "three four" 
+  }
+]

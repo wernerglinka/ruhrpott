@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Oberhausen",
+    "description" : "Oberhausen is a city on the river Emscher in the Ruhr Area, Germany, located between Duisburg and Essen",
+    "thumbnail": "v1665360784/zeche-nordstern/oberhausen-gasometer_jk95ma.png",
+    "web": "https://www.oberhausen.de/de/index.php",
+    "wikipedia": "https://en.wikipedia.org/wiki/Oberhausen",
+    "wappen": {
+      "src": "v1665363614/zeche-nordstern/oberhausen_udl5u8.png",
+      "aspectRatio": 152
+    },
+    "categories": "four six"
+  }
+]

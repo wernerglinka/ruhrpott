@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Bochum",
+    "description" : "Bochum, with a population of 364,920 (2016), is the sixth largest city of North Rhine-Westphalia and the 16th largest city of Germany.",
+    "thumbnail": "v1665360784/zeche-nordstern/bochum-bergbaumuseum_kg7o5k.jpg",
+    "web": "https://www.bochum.de/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Bochum",
+    "wappen" : {
+      "src": "v1665363614/zeche-nordstern/bochum_qvlwsq.png",
+      "aspectRatio": 120
+    },
+    "categories": "one two"
+  }
+]

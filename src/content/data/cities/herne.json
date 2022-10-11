@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Herne",
+    "description" : "Herne is a city im Rugrgebiet, Germany. It is located between Bochum and Gelsenkirchen.",
+    "thumbnail": "v1665360785/zeche-nordstern/herne-schlosskapelle-stru%CC%88nkede_b0sm4r.jpg",
+    "web": "https://www.herne.de/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Herne,_North_Rhine-Westphalia",
+    "wappen" : {
+      "src": "v1665363614/zeche-nordstern/herne_qbtpal.png",
+      "aspectRatio": 118
+    },
+    "categories": "three six"
+  }
+]

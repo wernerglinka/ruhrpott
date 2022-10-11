@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Essen",
+    "description" : "Essen is the central and, after Dortmund, second-largest city of the Ruhr, the largest urban area in Germany.",
+    "thumbnail": "v1665360784/zeche-nordstern/essen_bfvoy8.jpg",
+    "web": "https://www.essen.de/aktuell.de.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Essen",
+    "wappen" : {
+      "src": "v1665363614/zeche-nordstern/essen_zqvid0.png",
+      "aspectRatio": 92
+    },
+    "categories": "one two"
+  }
+]

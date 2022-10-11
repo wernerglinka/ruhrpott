@@ -72,8 +72,8 @@ sections:
     description: "section with text and logos"
     containerFields:
       disabled: false
-      containerId: ""
-      containerClass: ""
+      containerId: "section1"
+      containerClass: "text-logos"
       inContainer: true
       margin:
         top: true
@@ -94,16 +94,57 @@ sections:
             header: "h2"
             subTitle: "Fußball in the Ruhrpott plays a key role in German Fußball"
             prose: |-
-              A total of 16 German championships and eleven titles in the DFB Cup were won by teams from the Ruhr area. In 1937 FC Schalke 04 became the first double winner in Germany, in 1966 Borussia Dortmund was the first German club to win a European Cup and in 1997 Dortmund won the Champions League and FC Schalke 04 the UEFA Cup. A total of seven clubs from the Ruhr area have played in the Bundesliga so far, currently (2022/23) three clubs play in the top division with Schalke, Dortmund and VfL Bochum. In particular, Borussia Dortmund and FC Schalke 04 play an important role in German football and are also popular nationwide.
+              A total of 16 German championships and eleven titles in the DFB Cup were won by teams from the Ruhr area. In 1937 FC Schalke 04 became the first double winner in Germany, in 1966 Borussia Dortmund was the first German club to win a European Cup and in 1997 Dortmund won the Champions League and FC Schalke 04 the UEFA Cup. A total of seven clubs from the Ruhr area have played in the Bundesliga so far, currently (2022/23) three clubs play in the top division with Schalke, Dortmund and VfL Bochum. In particular, Borussia Dortmund and FC Schalke 04 play an important role in German fußball and are also popular nationwide.
           - name: logos
-            scope: "all" # all || selections
             source: fußball
-            
+            logoWidth: "150" # value in pixels
+            scope: "selections" # all || selections
+            selections:
+              - name: "Borussia Dortmund"
+              - name: "Schalke 04"
+              - name: "VfL Bochum" 
+  
+  - container: article # section || article || aside
+    description: "full width rich list section"
+    containerFields:
+      disabled: false
+      containerId: ""
+      containerClass: "rich-list-section"
+      inContainer: false
+      margin:
+        top: false
+        bottom: false
+      padding:
+        top: false
+        bottom: false
+      background:
+        color: ""
+        image: ""
+        isDark: false 
+    columns:
+      - column:
+        blocks:
+          - name: rich-list
+            source: "cities" # item data are located in data/cities.json
+            selections: 
+              - "Dortmund"
+              - "Gelsenkirchen"
+              - "Essen"
+              - "Bochum"
+              - "Mülheim"
+              - "Duisburg"
+              - "Bottrop"
+              - "Herne"
+              - "Hamm"
+              - "Recklinghausen"
+              - "Oberhausen"
+              - "Castrop Rauxel"
+              
   - container: article # section || article || aside
     description: "full width text section"
     containerFields:
       disabled: false
-      containerId: "section1"
+      containerId: ""
       containerClass: "this-class"
       inContainer: false
       margin:

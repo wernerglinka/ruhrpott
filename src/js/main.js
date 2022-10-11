@@ -10,6 +10,8 @@ import loadResponsiveImage from "./modules/load-responsive-image";
 import navigation from "./modules/navigation";
 import slides from "./modules/slides";
 import scrollToTarget from "./modules/scroll-to-target";
+import logos from "./modules/logos";
+import richLists from "./modules/rich-lists";
 
 function initPage() {
   
@@ -40,6 +42,8 @@ function initPage() {
   loadResponsiveImage.init();
   slides.init();
   scrollToTarget.init();
+  logos.init();
+  richLists.init();
 }
 
 window.addEventListener("load", function() {

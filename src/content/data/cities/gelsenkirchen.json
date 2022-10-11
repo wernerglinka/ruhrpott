@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Gelsenkirchen",
+    "description" : "Gelsenkirchen is the 25th most populous city of Germany and the 11th most populous in the state of North Rhine-Westphalia with 262,528 (2016) inhabitants. ",
+    "thumbnail": "v1665360784/zeche-nordstern/gelsenkirchen-musiktheater-im-revier_kc6spm.jpg",
+    "web": "https://www.gelsenkirchen.de/de/default.aspx",
+    "wikipedia": "https://en.wikipedia.org/wiki/Gelsenkirchen",
+    "wappen" : {
+      "src": "v1665363613/zeche-nordstern/gelsenkirchen_rkqis9.png",
+      "aspectRatio": 125
+    },
+    "categories": "one three"
+  }
+]

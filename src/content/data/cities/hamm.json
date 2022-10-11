@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Hamm",
+    "description" : "Hamm is located in the northeastern part of the Ruhr area. As of 2016 its population was 179,397. The city is situated between the A1 motorway and A2 motorway. Hamm railway station is an important hub for rail transport and renowned for its distinctive station building.",
+    "thumbnail": "v1665360783/zeche-nordstern/hamm-innenstadt_ehowvx.jpg",
+    "web": "https://www.hamm.de/startseite",
+    "wikipedia": "https://en.wikipedia.org/wiki/Hamm",
+    "wappen": {
+      "src": "v1665363613/zeche-nordstern/hamm_soopyr.png",
+      "aspectRatio": 120
+    },
+    "categories": "five six"
+  }
+]

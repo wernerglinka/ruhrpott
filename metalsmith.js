@@ -38,6 +38,23 @@ const mdToHTML = mdString => {
   }
 };
 
+const filterList = (list, selections) => {
+  const filterredList = [];
+  for (let i = 0; i < list.length; i++) {
+    for (let j = 0; j < selections.length; j++) {
+      if (list[i].name === selections[j].name) {
+        filterredList.push(list[i]);
+      }
+    }
+  }
+  return filterredList;
+};
+
+// turn a string of words into a unique array of words. Used to create a unique list of categories in rich-list.njk
+const toArray = (string) => {
+  return [...new Set(string.trim().split(" "))].sort();
+};
+
 // Define engine options for the inplace and layouts plugins
 const templateConfig = {
   directory: "templates",
@@ -51,6 +68,8 @@ const templateConfig = {
       blogDate,
       trimSlashes,
       mdToHTML,
+      filterList,
+      toArray
     },
   },
 };
@@ -71,6 +90,7 @@ Metalsmith(__dirname)
       metadata: "src/content/data/site.json",
       "metadata.navigation": "src/content/data/navigation.json",
       "metadata.fußball": "src/content/data/fußball",
+      "metadata.cities": "src/content/data/cities",
     })
   )
 

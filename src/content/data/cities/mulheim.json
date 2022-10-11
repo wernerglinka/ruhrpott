@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Mülheim",
+    "description" : "Mülheim also described as 'City on the River', is a city in North Rhine-Westphalia in Germany. It is located between Duisburg, Essen, Oberhausen ",
+    "thumbnail": "v1665360784/zeche-nordstern/muelheim-styrumer-bruecke_qbv9do.jpg",
+    "web": "https://www.muelheim-ruhr.de/cms/index.php",
+    "wikipedia": "https://en.wikipedia.org/wiki/M%C3%BClheim",
+    "wappen": {
+      "src": "v1665363614/zeche-nordstern/muelheim-an-de-ruhr_mcof3n.png",
+      "aspectRatio": 161
+    },
+    "categories": "five"
+  }
+]

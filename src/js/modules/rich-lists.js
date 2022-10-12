@@ -8,55 +8,64 @@
  */
 const listFilters = (function() {
 
-  // fade out
-
-  function fadeOut(el){
-    el.style.opacity = 1;
-
-    (function fade() {
-      if ((el.style.opacity -= .1) < 0) {
-        el.style.display = "none";
-      } else {
-        requestAnimationFrame(fade);
-      }
-    })();
-  }
-
-  // fade in
-
-  function fadeIn(el, display){
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-
-    (function fade() {
-      var val = el.style.opacity;
-      console.log(val);
-      if (!((val += .1) >= 1)) {
-        console.log(val);
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
-      } 
-    })();
-  }
-    
   const hideAllListItems = (list) => {
     const listItems = list.querySelectorAll("li");
+    
+    // use promise all to insure that all list items are hidden before
+    // any new items are shown
+    const allHidePromises = [];
+
     listItems.forEach((item) => {
-      fadeOut(item);
+      item.style.opacity = 1;
+
+      const hidePromise = new Promise((resolve, reject) => {
+        (function fade() {
+          if((item.style.opacity -= .1) < 0) {
+            item.style.display = "none";
+            resolve();
+          } else {
+            setTimeout(requestAnimationFrame(fade), 100);
+          }
+        })();
+      });
+
+      allHidePromises.push(hidePromise);
     });
-  };
-  const showAllListItems = (list) => {
-    const listItems = list.querySelectorAll("li");
-    listItems.forEach((item) => {
-      fadeIn(item);
-    });
+    
+    return Promise.all(allHidePromises);  
   };
 
-  const showThisListItem = (list, category) => {
+  const showAllListItems = (list, display) => {
     const listItems = list.querySelectorAll("li");
     listItems.forEach((item) => {
-      if (item.classList.contains(category)) {
-        fadeIn(item);
+      item.style.opacity = 0;
+      item.style.display = display || "block";
+
+      (function fade() {
+        let val = parseFloat(item.style.opacity);
+        if (!((val += .1) > 1)) {
+          item.style.opacity = val;
+          setTimeout(requestAnimationFrame(fade), 100);
+        } 
+      })();
+    });
+    
+  };
+
+  const showThisListItem = (list, category, display) => {
+    const listItems = list.querySelectorAll("li");
+    listItems.forEach((item) => {
+      if (item.dataset.categories.includes(category)) {
+        item.style.opacity = 0;
+        item.style.display = display || "block";
+
+        (function fade() {
+          let val = parseFloat(item.style.opacity);
+          if (!((val += .1) > 1)) {
+            item.style.opacity = val;
+            setTimeout(requestAnimationFrame(fade), 100);
+          } 
+        })();
       }
     });
   };
@@ -88,9 +97,13 @@ const listFilters = (function() {
             showAllListItems(filterTargets);
           } else {
             // hide all list items
-            hideAllListItems(filterTargets);
-            // show the targets items only
-            showThisListItem(filterTargets, filterBy);
+            hideAllListItems(filterTargets)
+              .then((value) => { 
+                console.log(value);
+                // show list items that match filter value
+                showThisListItem(filterTargets, filterBy);
+              } );  
+            
           }
         });
       });

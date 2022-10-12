@@ -34,7 +34,7 @@
       {% for sourceItem in sourceList %}
         {% if sourceItem.name === item %}
           {% set imageSource = metadata.site.imagePrefix ~ sourceItem.thumbnail %}
-          <li class="{{ sourceItem.categories }}">
+          <li class="{{ sourceItem.name | lower | replace(' ', '-') }}" data-categories="{{ sourceItem.categories }}">
             <div class="flip-card-wrapper">
               <div class="flip-card" style="background-image: url('{{ imageSource }}');">
                 <p>{{ sourceItem.name }}</p>

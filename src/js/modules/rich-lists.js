@@ -24,7 +24,7 @@ const listFilters = (function() {
             item.style.display = "none";
             resolve();
           } else {
-            setTimeout(requestAnimationFrame(fade), 100);
+            setTimeout(fade, 50);
           }
         })();
       });
@@ -45,7 +45,7 @@ const listFilters = (function() {
         let val = parseFloat(item.style.opacity);
         if (!((val += .1) > 1)) {
           item.style.opacity = val;
-          setTimeout(requestAnimationFrame(fade), 100);
+          setTimeout(fade, 50);
         } 
       })();
     });
@@ -63,7 +63,7 @@ const listFilters = (function() {
           let val = parseFloat(item.style.opacity);
           if (!((val += .1) > 1)) {
             item.style.opacity = val;
-            setTimeout(requestAnimationFrame(fade), 100);
+            setTimeout(fade, 50);
           } 
         })();
       }
@@ -98,12 +98,10 @@ const listFilters = (function() {
           } else {
             // hide all list items
             hideAllListItems(filterTargets)
-              .then((value) => { 
-                console.log(value);
+              .then(() => { 
                 // show list items that match filter value
                 showThisListItem(filterTargets, filterBy);
               } );  
-            
           }
         });
       });

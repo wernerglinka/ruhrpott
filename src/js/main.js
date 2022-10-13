@@ -12,6 +12,7 @@ import slides from "./modules/slides";
 import scrollToTarget from "./modules/scroll-to-target";
 import logos from "./modules/logos";
 import richLists from "./modules/rich-lists";
+//import richListsIsotope from "./modules/rich-lists-isotope";
 
 function initPage() {
   
@@ -44,6 +45,8 @@ function initPage() {
   scrollToTarget.init();
   logos.init();
   richLists.init();
+  //richListsIsotope.init();
+ 
 }
 
 window.addEventListener("load", function() {

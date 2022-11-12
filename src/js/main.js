@@ -11,8 +11,8 @@ import navigation from "./modules/navigation";
 import slides from "./modules/slides";
 import scrollToTarget from "./modules/scroll-to-target";
 import logos from "./modules/logos";
-import richLists from "./modules/rich-lists";
-//import richListsIsotope from "./modules/rich-lists-isotope";
+//import richLists from "./modules/rich-lists";
+import richListsIsotope from "./modules/rich-lists-isotope";
 
 function initPage() {
   
@@ -33,6 +33,7 @@ function initPage() {
         leave() {},
         afterLeave() {
           navigation.init();
+          slides.init();
         },
         enter() {},
       },
@@ -42,10 +43,10 @@ function initPage() {
   navigation.init();
   loadResponsiveImage.init();
   slides.init();
-  scrollToTarget.init();
+  //scrollToTarget.init();
   logos.init();
-  richLists.init();
-  //richListsIsotope.init();
+  //richLists.init();
+  richListsIsotope.init();
  
 }
 
